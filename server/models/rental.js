@@ -10,7 +10,7 @@ const rentalShema = new Shema({
     bedrooms: Number,
     shared: Boolean,
     description: {type:String, required:true},
-    dailyrate:Number,
+    dailyRate:Number,
     createdAt: {type:Date, default: Date.now}
 
 });
