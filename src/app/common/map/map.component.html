@@ -1,0 +1,23 @@
+<agm-map 
+(mapReady) = "mapReadyHandler()"
+[latitude]="lat" 
+[longitude]="lng"
+[zoom] = "13">
+  <agm-circle 
+  [latitude]="lat" 
+  [longitude]="lng"
+  [radius] = "800"
+  [fillColor] = "'#F44336'"
+  [fillOpacity] = "0.4">
+
+  </agm-circle>
+
+  <agm-info-window
+      [latitude]="lat" 
+      [longitude]="lng"
+      [maxWidth] = "300"
+      [isOpen] = true>
+      Ups there is a problem with to find the location..
+
+  </agm-info-window>
+</agm-map>
