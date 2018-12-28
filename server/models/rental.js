@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-const Shema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-const rentalShema = new Shema({
+const rentalShema = new Schema({
     title:{type: String, required:true, max:[128, 'Too long, max is 120 characters']},
     city:{type: String, required:true, lowercase:true},
     street:{type: String, required:true, min:[4, 'Too short']},
@@ -11,7 +11,9 @@ const rentalShema = new Shema({
     shared: Boolean,
     description: {type:String, required:true},
     dailyRate:Number,
-    createdAt: {type:Date, default: Date.now}
+    createdAt: {type:Date, default: Date.now},
+    user :{type: Schema.Types.ObjectId, ref: 'User'}
+
 
 });
 
